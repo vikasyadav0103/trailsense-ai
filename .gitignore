@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.pytest_cache/
+
+# Java / Maven
+target/
+*.class
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Local data and secrets
+.env.*
+!.env.example
+data/
+observations/
+*.sqlite
+*.sqlite3
+*.db
+
+# Model weights: keep large files out of Git
+models/**/*.pt
+models/**/*.pth
+models/**/*.onnx
+models/**/*.safetensors
+
+# OS
+.DS_Store
+Thumbs.db
+frontend/node_modules/
+frontend/dist/
