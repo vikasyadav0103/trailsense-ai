@@ -59,6 +59,16 @@ Bird photograph → EfficientNetB2 classifier → Predicted species
 
 ## Setup and installation
 
+### Single-container deployment
+
+The root `Dockerfile` builds the React/Vite frontend and packages it with the FastAPI backend in one image. Configure `.env`, then run:
+
+```bash
+docker compose up --build
+```
+
+Open `http://localhost:8000`. The same container serves the React interface, `/predict`, and `/api/nature/guide`. The first startup may download EfficientNetB2 weights; the Compose volume preserves the model cache across restarts.
+
 ### Web UI
 
 The Web UI is served directly by the FastAPI service at `http://localhost:8000/`. When the server is running, simply open your browser and navigate to `http://127.0.0.1:8000/` to use the interactive application.
